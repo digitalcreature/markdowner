@@ -16,6 +16,8 @@ class HTML:
 		str = "%s>" % str
 		print("%s%s" % (self.indent(), str))
 		return self
+	def tag(self, tag, content="", **attributes):
+		return self.open(tag, **attributes).content(content).close()
 	def content(self, content):
 		print("%s%s" % (self.indent(1),content))
 		return self

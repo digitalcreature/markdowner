@@ -6,14 +6,10 @@ html = markdowner.HTML()
 html.\
 	open("html").\
 		open("head").\
-			open("title").\
-				content("test page").\
-			close().\
+			tag("title", "test page").\
 		close().\
 		open("body", style="color: red").\
-			open("h1").\
-				content("hello, world!").\
-			close().\
+			tag("h1", "hello, world!", id="hello").\
 			open("p").\
 				content("here is some text").\
 			close().\
