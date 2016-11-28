@@ -3,6 +3,9 @@ import re
 
 html = markdowner.HTML()
 
+print(markdowner.HTML.opentag("code", id="sample1", language="c++"))
+print(markdowner.HTML.closetag("code"))
+
 html.\
 	open("html").\
 		open("head").\
@@ -12,6 +15,5 @@ html.\
 			tag("h1", "hello, world!", id="hello").\
 			open("p").\
 				content("here is some text").\
-			close().\
-		close().\
-	close()
+				single("br").\
+closeall()
